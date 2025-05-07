@@ -32,14 +32,27 @@ const main = async () => {
             content: "HTTPS, the secure version of HTTP, works by encrypting data transmitted between a web server and a client (like a browser) using Transport Layer Security (TLS), formerly known as Secure Sockets Layer (SSL).",
             authorId: 1,
             postCategory: {
-                create: {
-                    categoryId: 2
+                create: [
+                    {
+                        categoryId: 1,
+                    },
+                    {
+                        categoryId: 2
+                    },
+                    {
+                        categoryId: 3
+                    }
+                ]
+
+                // for creating single category 
+                // {
+                    // categoryId: 2
                     // categor: {
                         // connect: {
                             // id: 1
                         // }
                     // }
-                }
+                // }
             }
         },
         include: {
