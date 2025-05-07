@@ -100,7 +100,7 @@ const result = await p.post.findMany({
         include: {
             postCategory: {
                 include: {
-                    categor: true
+                    category: true
                 }
             }
         }

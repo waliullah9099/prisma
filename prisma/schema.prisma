@@ -25,6 +25,7 @@ model User {
   id       Int      @id @default(autoincrement())
   username String   @unique
   email    String
+  age      Int      @default(0)
   role     UserRole @default(user)
   profile  Profile?
   post     Post[]
@@ -54,7 +55,7 @@ model PostCategory {
   post   Post @relation(fields: [postId], references: [id])
 
   categoryId Int
-  category    Category @relation(fields: [categoryId], references: [id])
+  category   Category @relation(fields: [categoryId], references: [id])
 
   @@id([postId, categoryId])
   @@map("post_catefory")
